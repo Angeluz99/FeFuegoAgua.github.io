@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "fonkiu style.css"/>
+
+    <title>Culto</title>
+</head>
+<body>
+  <form id="form">
+    <textarea id="textarea" class="textarea"></textarea>
+    <button type="submit" onclick="submitForm()">Guardar</button>
+  </form>
+
+  <form id="form2">
+    <textarea id="textarea2" class="textarea"></textarea>
+    <button type="submit" onclick="submitForm2()">Guardar2</button>
+  </form>
+
+  <div id="gridContainer">  
+    
+    <div id="leftStrip"> 
+      <img src="cultoMovil strip.png">
+    </div>
+
+    <div id= "dataUp"></div>
+
+    <div id= "dataDown"></div>
+
+    <div id="rightStrip">
+      <img src="cultoMovil strip2.png">
+    </div>
+
+  </div>
+
+
+  <div id="optionsContainer"> 
+    <div id= "option1" class= "optionsToText">
+      <p>CULTO 2A</p>
+    </div>
+
+    <div id= "option2" class= "optionsToText">
+      <p>CULTO 2B</p>
+    </div>
+  </div>
+
+    <a href="fonkiu.html" >
+      <div id= "goToMenu">
+        <p>Ir Al Mapa</p>
+      </div>
+    </a>
+
+
+
+  <script>
+  function submitForm() {
+    // Obtén el elemento del formulario
+    const textarea = document.getElementById("textarea").value;
+    // Almacena el texto en local storage
+    localStorage.setItem("textarea", textarea);
+  }
+  // Recupera el texto de local storage al cargar la página
+  const storedText = localStorage.getItem("textarea");
+  if (storedText) {
+    // Divide el texto en párrafos usando el delimitador "\n"
+    const paragraphs = storedText.split("\n");
+    // Crea un elemento HTML para cada párrafo
+    let html = "";
+    for (const paragraph of paragraphs) {
+      html += `<p>${paragraph}</p>`;
+    }
+    // Coloca el HTML en el documento
+    document.getElementById("dataUp").innerHTML = html;
+  }
+
+
+  function submitForm2() {         
+  const textarea2 = document.getElementById("textarea2").value;
+  localStorage.setItem("textarea2", textarea2);
+  }
+      
+  const storedText2 = localStorage.getItem("textarea2");
+  if (storedText2) {
+    const paragraphs = storedText2.split("\n");
+        
+    let html = "";
+    for (const paragraph of paragraphs) {
+      html += `<p>${paragraph}</p>`;
+    }
+        
+    document.getElementById("dataDown").innerHTML = html;
+  }
+  </script>
+</body>
+</html>

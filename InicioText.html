@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "fonkiu style.css"/>
+
+    <title>Inicio</title>
+</head>
+<body>
+  <form id="form">
+      <textarea id="inicioText" class="textarea"></textarea>
+      <button type="submit" onclick="submitForm()">Guardar</button>
+    </form>
+  <div id= "data"></div>
+
+
+  <div id="optionsContainer">
+    <a href="AguaText.html">
+        <div id= "option1" class= "optionsToText">
+          <p>Ir Al Agua</p>
+        </div>
+
+    <a href="CultoText.html">
+        <div id= "option2" class= "optionsToText">
+          <p>Ir Al Culto</p>
+        </div>
+    
+    <a href="BosqueText.html" >
+      <div id= "option3" class= "optionsToText">
+        <p>Ir Al Bosque</p>
+      </div>
+    </a>
+  </div>
+
+  <a href="fonkiu.html">
+    <div id= "goToMenu">
+      <p>Ir Al Mapa</p>
+    </div>
+
+
+      <script>
+        function submitForm() {
+          // Obtén el elemento del formulario
+          const textarea = document.getElementById("inicioText").value;
+      
+          // Almacena el texto en local storage
+          localStorage.setItem("inicioText", textarea);
+        }
+      
+        // Recupera el texto de local storage al cargar la página
+        const storedInicio = localStorage.getItem("inicioText");
+        if (storedInicio) {
+          // Divide el texto en párrafos usando el delimitador "\n"
+          const paragraphs = storedInicio.split("\n");
+      
+          // Crea un elemento HTML para cada párrafo
+          let html = "";
+          for (const paragraph of paragraphs) {
+            html += `<p>${paragraph}</p>`;
+          }
+      
+          // Coloca el HTML en el documento
+          document.getElementById("data").innerHTML = html;
+        }
+      </script>
+</body>
+</html>
