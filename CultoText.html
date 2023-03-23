@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "fonkiu style.css"/>
+    <link rel="stylesheet" href= "textos.css"/>
 
     <title>Culto</title>
 </head>
@@ -22,7 +22,7 @@
   <div id="gridContainer">  
     
     <div id="leftStrip"> 
-      <img src="cultoMovil strip.png">
+      <img src="culto strip.png">
     </div>
 
     <div id= "dataUp"></div>
@@ -46,7 +46,7 @@
     </div>
   </div>
 
-    <a href="fonkiu.html" >
+    <a href="index.html" >
       <div id= "goToMenu">
         <p>Ir Al Mapa</p>
       </div>
@@ -68,9 +68,29 @@
     const paragraphs = storedText.split("\n");
     // Crea un elemento HTML para cada párrafo
     let html = "";
+
+    // let counter = 0; 
+
     for (const paragraph of paragraphs) {
       html += `<p>${paragraph}</p>`;
+      // counter += 1;
+      // console.log(counter)
     }
+
+     
+    // let half = (Math.floor(counter/2))
+    // console.log(half)
+
+    // let halfCounter = 0
+    // for (const paragraph of paragraphs) {
+    //   halfCounter += 1;
+    //    const halfHtml = "";
+
+    //   if (halfCounter = half){
+    //     firstHalf = halfHtml
+    //   }
+
+    
     // Coloca el HTML en el documento
     document.getElementById("dataUp").innerHTML = html;
   }
