@@ -4,41 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "fonkiu style.css"/>
+    <link rel="stylesheet" href= "textos.css"/>
 
     <title>Inicio</title>
 </head>
 <body>
   <form id="form">
-      <textarea id="inicioText" class="textarea"></textarea>
+      <!-- <textarea id="inicioText" class="textarea"></textarea>
       <button type="submit" onclick="submitForm()">Guardar</button>
-    </form>
-  <div id= "data"></div>
+    </form> -->
 
 
-  <div id="optionsContainer">
+  <div id= "dataInicio">
+
+  </div>
+
+
+  <div id="optionsContainerInicio">
     <a href="AguaText.html">
-        <div id= "option1" class= "optionsToText">
-          <p>Ir Al Agua</p>
+        <div id= "optionAgua" class= "optionsToText">
+          <p>Toma un par de baldes y sale tras la chusma.</p>  
+          <p>A un par de calles, la gente se acumula buscando</p>
+          <p>un espacio para acercarse al chorro que emana del</p> 
+          <p>suelo. Entre las personas, reconoce a la mujer</p> 
+          <p>de la que se ha acompañado Teresa para acumular...</p>
         </div>
 
     <a href="CultoText.html">
-        <div id= "option2" class= "optionsToText">
-          <p>Ir Al Culto</p>
+        <div id= "optionCulto" class= "optionsToText">
+          <p>Ya trae los baldes en la mano. Sin embargo,</p> 
+          <p>piensa que no le tomará mucho tiempo hablar con </p>
+          <p>el guardia. Al encararlo, este se pone a la</p>
+          <p>defensiva. -¿De qué hablas? Aquí nadie mete nada.</p>
+          <p>Le hablan de tú a pesar de que luce 10 años...</p>
         </div>
     
     <a href="BosqueText.html" >
-      <div id= "option3" class= "optionsToText">
-        <p>Ir Al Bosque</p>
+      <div id= "optionBosque" class= "optionsToText">
+        <p>No está dispuesto a arriesgar el trabajo.</p>
+        <p>Busca ropa limpia y se va al bosque sin bañarse.</p> 
+        <p>Su patrón se va apenas llega. Había solo tres</p> 
+        <p>integrantes de la cuadrilla. El mandó a cuatro.</p>
+        <p>El patrón le deja las llaves de una camioneta...</p>
       </div>
     </a>
   </div>
 
-  <a href="index.html">
-    <div id= "goToMenu">
-      <p>Ir Al Mapa</p>
-    </div>
-
+    <a href="index.html">
+      <div id= "goToMenu">
+        <p>Ir Al Mapa</p>
+      </div>
+    </a>
 
       <script>
         function submitForm() {
@@ -62,7 +78,7 @@
           }
       
           // Coloca el HTML en el documento
-          document.getElementById("data").innerHTML = html;
+          document.getElementById("dataInicio").innerHTML = html;
         }
       </script>
 </body>

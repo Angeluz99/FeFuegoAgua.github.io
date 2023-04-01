@@ -9,17 +9,17 @@
     <title>Culto</title>
 </head>
 <body>
-  <form id="form">
-    <textarea id="textarea" class="textarea"></textarea>
+  <!-- <form id="form">
+    <textarea id="cultoText" class="textarea"></textarea>
     <button type="submit" onclick="submitForm()">Guardar</button>
-  </form>
+  </form> -->
 
-  <form id="form2">
+  <!-- <form id="form2">
     <textarea id="textarea2" class="textarea"></textarea>
     <button type="submit" onclick="submitForm2()">Guardar2</button>
-  </form>
+  </form> -->
 
-  <div id="gridContainer">  
+  <div id="gridContainerCulto" class="gridText">  
     
     <div id="leftStrip"> 
       <img src="culto strip.png">
@@ -36,14 +36,19 @@
   </div>
 
 
-  <div id="optionsContainer"> 
-    <div id= "option1" class= "optionsToText">
-      <p>CULTO 2A</p>
+  <div id="optionsContainerCulto"> 
+    <div id= "optionCulto2A" class= "optionsToText">
+      <p>(En desarrollo) Decidido, va y encara esa mueca. No permitirá otra burla</p>
+      <p>del muchacho, y debe entender qué relación tiene con Berenice y</p>
+      <p>Teresa. El hedor de los gatos cala más que el suyo propio</p>
     </div>
 
-    <div id= "option2" class= "optionsToText">
-      <p>CULTO 2B</p>
-    </div>
+    <a href="Culto2bText.html" >
+      <div id= "optionCulto2B" class= "optionsToText">
+        <p>Apenas se da cuenta de lo mal que él mismo huele, pobre </p> <p>Berenice, piensa, y se avergüenza de sí mismo; tan bien que ella </p>
+        <p>olía. No puede posponer el baño más.</p>
+      </div>
+    </a>
   </div>
 
     <a href="index.html" >
@@ -57,61 +62,60 @@
   <script>
   function submitForm() {
     // Obtén el elemento del formulario
-    const textarea = document.getElementById("textarea").value;
+    const textarea = document.getElementById("cultoText").value;
     // Almacena el texto en local storage
-    localStorage.setItem("textarea", textarea);
+    localStorage.setItem("cultoText", textarea);
   }
+
+
   // Recupera el texto de local storage al cargar la página
-  const storedText = localStorage.getItem("textarea");
+  const storedText = localStorage.getItem("cultoText");
   if (storedText) {
     // Divide el texto en párrafos usando el delimitador "\n"
     const paragraphs = storedText.split("\n");
-    // Crea un elemento HTML para cada párrafo
-    let html = "";
+    console.log(paragraphs.length)
+    // Crea un elemento HTML para cada seccion
+    let html1 = "";
+    let html2 = "";
 
-    // let counter = 0; 
+    let counter = 0; 
 
-    for (const paragraph of paragraphs) {
-      html += `<p>${paragraph}</p>`;
-      // counter += 1;
-      // console.log(counter)
+    //Localiza la mitad de elemtos y dividelo en dos secciones.
+    for (const paragraph of paragraphs){
+
+      counter += 1;
+      console.log(counter)
+      if (counter <= (Math.floor(paragraphs.length/2))){
+        html1 += `<p>${paragraph}</p>`;
+        }
+      else {
+        html2 += `<p>${paragraph}</p>`;
+        }
     }
-
-     
-    // let half = (Math.floor(counter/2))
-    // console.log(half)
-
-    // let halfCounter = 0
-    // for (const paragraph of paragraphs) {
-    //   halfCounter += 1;
-    //    const halfHtml = "";
-
-    //   if (halfCounter = half){
-    //     firstHalf = halfHtml
-    //   }
-
     
     // Coloca el HTML en el documento
-    document.getElementById("dataUp").innerHTML = html;
+    document.getElementById("dataUp").innerHTML = html1;
+    document.getElementById("dataDown").innerHTML = html2;
+
   }
 
 
-  function submitForm2() {         
-  const textarea2 = document.getElementById("textarea2").value;
-  localStorage.setItem("textarea2", textarea2);
-  }
+  // function submitForm2() {         
+  // const textarea2 = document.getElementById("textarea2").value;
+  // localStorage.setItem("textarea2", textarea2);
+  // }
       
-  const storedText2 = localStorage.getItem("textarea2");
-  if (storedText2) {
-    const paragraphs = storedText2.split("\n");
+  // const storedText2 = localStorage.getItem("textarea2");
+  // if (storedText2) {
+  //   const paragraphs = storedText2.split("\n");
         
-    let html = "";
-    for (const paragraph of paragraphs) {
-      html += `<p>${paragraph}</p>`;
-    }
+  //   let html = "";
+  //   for (const paragraph of paragraphs) {
+  //     html += `<p>${paragraph}</p>`;
+  //   }
         
-    document.getElementById("dataDown").innerHTML = html;
-  }
+  //   document.getElementById("dataDown").innerHTML = html;
+  // }
   </script>
 </body>
 </html>

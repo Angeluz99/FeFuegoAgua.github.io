@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "textos.css"/>
 
-    <title>Bosque</title>
+    <title>Culto2B</title>
 </head>
 <body>
-  <form id="form">
-    <textarea id="bosqueText" class="textarea"></textarea>
+  <!-- <form id="form">
+    <textarea id="culto2BText" class="textarea"></textarea>
     <button type="submit" onclick="submitForm()">Guardar</button>
-  </form>
+  </form> -->
 
-  <div id="gridContainerBosque" class="gridText">  
+
+  <div id="gridContainerCulto" class="gridText">  
     
     <div id="leftStrip"> 
-      <img src="bosque strip.png">
+      <img src="culto strip.png">
     </div>
 
     <div id= "dataUp"></div>
@@ -25,20 +26,30 @@
     <div id= "dataDown"></div>
 
     <div id="rightStrip">
-      <img src="bosque strip2.png">
+      <img src="culto strip2.png">
     </div>
 
   </div>
 
 
-  <div id="optionsContainerBosque"> 
-    <div id= "optionBosque2A" class= "optionsToText">
-      <p>BOSQUE 2A</p>
+  <div id="optionsContainerCulto"> 
+
+    <div id= "optionCulto3AB" class= "optionsToText">
+      <p>(Desenlace 3AB. En desarrollo) –No sé, no creo que las torundas sean suficientes</p> 
+      <p>para aguantar el olor.</p>
+      <p>–Confía en mí, será rápido, si te desmayas te cuido como aquella vez.</p>
+      <p>Le tiende una de su larga y fresca mano izquierda, él la toma y se levanta.</p>
+        
     </div>
 
-    <div id= "optionBosque2B" class= "optionsToText">
-      <p>BOSQUE 2B</p>
+    <div id= "optionCulto3B" class= "optionsToText">
+    <p>(Desenlace 3B. En desarrollo) –No entraré ahí, sabes, me hace mal.</p> 
+    <p>–Yo estoy confiando en ti.</p>
+    <p>–Lo sé, pero, ahora no tengo tiempo, debo ir a ver lo de un trabajo.</p> 
+    <p>Miente planeando ir al bosque ahora mismo; quizá pueda detener tanta locura.</p>
+
     </div>
+    
   </div>
 
     <a href="index.html" >
@@ -52,14 +63,14 @@
   <script>
   function submitForm() {
     // Obtén el elemento del formulario
-    const textarea = document.getElementById("bosqueText").value;
+    const textarea = document.getElementById("culto2BText").value;
     // Almacena el texto en local storage
-    localStorage.setItem("bosqueText", textarea);
+    localStorage.setItem("culto2BText", textarea);
   }
 
 
   // Recupera el texto de local storage al cargar la página
-  const storedText = localStorage.getItem("bosqueText");
+  const storedText = localStorage.getItem("culto2BText");
   if (storedText) {
     // Divide el texto en párrafos usando el delimitador "\n"
     const paragraphs = storedText.split("\n");
@@ -88,6 +99,7 @@
     document.getElementById("dataDown").innerHTML = html2;
 
   }
+
 
   </script>
 </body>
