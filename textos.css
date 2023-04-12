@@ -44,6 +44,7 @@
     border-radius: 4px;
     font-size: 16px;
     resize:vertical;
+    /* display: none; */
 }
 
 /* #cultoText{
@@ -71,7 +72,7 @@
 #dataInicio{
     z-index: 10;
     grid-area: dataUp;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: justify;
     margin: 3rem;
     padding: 3rem;
@@ -178,7 +179,7 @@
     padding:1rem ;
     margin: 1rem ;
     border-radius: 25%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #ffffff;
     
 
@@ -240,11 +241,19 @@ a {
     #rightStrip img, #leftStrip img{
         width: 20rem;
     }
+
+    #dataInicio{
+        font-size: 2rem;
+    }
     
     #dataDown, #dataUp{
 
         margin: 5rem ;
         font-size: 2rem;
 
+    }
+
+    .optionsToText {
+        font-size: 1.5rem;
     }
 }

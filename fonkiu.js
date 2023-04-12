@@ -64,14 +64,14 @@ const leidoBosqueArr = [ ]
     Bosque.addEventListener("mouseout", darkBosque);
 
 
-//     let angle = 0;
-// setInterval(function(){
-//     angle += .1;
-//     document.getElementById("MainGrid").style.transform = "rotate("+angle+"deg)";
-// }, 50);
+   let angle = 0;
+    setInterval(function(){
+        angle += .1;
+        document.getElementById("mainGrid").style.transform = "rotate("+angle+"deg)";
+    }, 100);
 
-//     let angle2 = 0;
-// setInterval(function(){
-//     angle2 += -.1;
-//     document.getElementById("primer").style.transform = "rotate("+angle2+"deg)";
-// }, 50);
+     let angle2 = 0;
+    setInterval(function(){
+        angle2 += -.1;
+        document.getElementById("primer").style.transform = "rotate("+angle2+"deg)";
+    }, 100);

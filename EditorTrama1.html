@@ -9,10 +9,10 @@
     <title>Culto</title>
 </head>
 <body>
-  <!-- <form id="form">
+  <form id="form">
     <textarea id="cultoText" class="textarea"></textarea>
     <button type="submit" onclick="submitForm()">Guardar</button>
-  </form> -->
+  </form>
 
   <!-- <form id="form2">
     <textarea id="textarea2" class="textarea"></textarea>
@@ -60,17 +60,21 @@
 
 
   <script>
-  fetch('Culto.txt')
-  .then(response => response.blob())
-  .then(blob => {
-    const reader = new FileReader();
-    reader.addEventListener('load', (event) => {
-      const fileContent = event.target.result;
-      
-      console.log(fileContent);
-      const paragraphs = fileContent.split("\n");
+  function submitForm() {
+    // Obtén el elemento del formulario
+    const textarea = document.getElementById("cultoText").value;
+    // Almacena el texto en local storage
+    localStorage.setItem("cultoText", textarea);
+  }
 
-      // // // Crea un elemento HTML para cada párrafo
+
+  // Recupera el texto de local storage al cargar la página
+  const storedText = localStorage.getItem("cultoText");
+  if (storedText) {
+    // Divide el texto en párrafos usando el delimitador "\n"
+    const paragraphs = storedText.split("\n");
+    console.log(paragraphs.length)
+    // Crea un elemento HTML para cada seccion
     let html1 = "";
     let html2 = "";
 
@@ -92,15 +96,8 @@
     // Coloca el HTML en el documento
     document.getElementById("dataUp").innerHTML = html1;
     document.getElementById("dataDown").innerHTML = html2;
-    });
-    reader.readAsText(blob);
 
-    
-  });
-
-
-
-  
+  }
 
 
   // function submitForm2() {         
