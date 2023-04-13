@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Editor</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "textos.css"/>
+
+    <title>Inicio</title>
+</head>
+<body>
+  <form id="form">
+      <textarea id="inicioEditor" class="textarea"></textarea>
+      <button type="submit" onclick="submitForm()">Guardar</button>
+    </form>
+
+
+  <div id= "dataInicio">
+
+  </div>
+
+
+<div id="optionsContainerInicio">
+    <a href="">
+        <div id= "optionAgua" class= "optionsToText">
+
+        </div>
+
+    <a href="EditorTrama1.html">
+        <div id= "optionCulto" class= "optionsToText">
+
+        </div>
+    
+    <a href="" >
+            <div id= "optionBosque" class= "optionsToText">
+
+            </div>
+</div>
+
+
+  <a href="mapa 3-9.html" >
+    <div id= "goToMenu">
+      <p>Ir Al Mapa De Edición</p>
+    </div>
+  </a>
+
+      <script>
+
+
+         function submitForm() {
+       // Obtén el elemento del formulario
+          const textarea = document.getElementById("inicioEditor").value;
+        // Almacena el texto en local storage
+           localStorage.setItem("inicioEditor", textarea);
+         }
+      
+         //Recupera el texto de local storage al cargar la página
+        const storedInicio = localStorage.getItem("inicioEditor");
+
+
+        if (storedInicio) {
+    // Divide el texto en párrafos usando el delimitador "\n"
+    const paragraphs = storedInicio.split("\n");
+    
+
+             // Crea un elemento HTML para cada párrafo
+        let html = "";
+            for (const paragraph of paragraphs) {
+            html += `<p>${paragraph}</p>`;
+            }
+
+            // Coloca el HTML en el documento
+        document.getElementById("dataInicio").innerHTML = html;
+    }
+      </script>
+</body>
+</html>
+</body>
+</html>

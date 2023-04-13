@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "textos.css"/>
 
-    <title>Culto</title>
+    <title>Trama 1</title>
 </head>
 <body>
   <form id="form">
-    <textarea id="cultoText" class="textarea"></textarea>
+    <textarea id="textarea" class="textarea"></textarea>
     <button type="submit" onclick="submitForm()">Guardar</button>
   </form>
 
@@ -30,7 +30,7 @@
     <div id= "dataDown"></div>
 
     <div id="rightStrip">
-      <img src="cultoMovil strip2.png">
+      <img src="culto strip2.png">
     </div>
 
   </div>
@@ -38,22 +38,19 @@
 
   <div id="optionsContainerCulto"> 
     <div id= "optionCulto2A" class= "optionsToText">
-      <p>(En desarrollo) Decidido, va y encara esa mueca. No permitirá otra burla</p>
-      <p>del muchacho, y debe entender qué relación tiene con Berenice y</p>
-      <p>Teresa. El hedor de los gatos cala más que el suyo propio</p>
+
     </div>
 
-    <a href="Culto2bText.html" >
+    <a href="" >
       <div id= "optionCulto2B" class= "optionsToText">
-        <p>Apenas se da cuenta de lo mal que él mismo huele, pobre </p> <p>Berenice, piensa, y se avergüenza de sí mismo; tan bien que ella </p>
-        <p>olía. No puede posponer el baño más.</p>
+
       </div>
     </a>
   </div>
 
-    <a href="index.html" >
+    <a href="mapa 3-9.html" >
       <div id= "goToMenu">
-        <p>Ir Al Mapa</p>
+        <p>Ir Al Mapa De Edición</p>
       </div>
     </a>
 
@@ -62,14 +59,14 @@
   <script>
   function submitForm() {
     // Obtén el elemento del formulario
-    const textarea = document.getElementById("cultoText").value;
+    const textarea = document.getElementById("textarea").value;
     // Almacena el texto en local storage
-    localStorage.setItem("cultoText", textarea);
+    localStorage.setItem("textarea", textarea);
   }
 
 
   // Recupera el texto de local storage al cargar la página
-  const storedText = localStorage.getItem("cultoText");
+  const storedText = localStorage.getItem("textarea");
   if (storedText) {
     // Divide el texto en párrafos usando el delimitador "\n"
     const paragraphs = storedText.split("\n");

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;1,100&family=Poppins:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;1,100&family=Poppins:wght@400;500&family=Roboto+Slab&display=swap');
 :root {
     --bosque: #309221 ;
     --bosque2:#45B035;
@@ -40,11 +40,10 @@ body{
 
 .grid{
 
-/* border: .2rem solid  rgb(18, 23, 120); */
+margin: 0 auto;
 background-color: rgba(173, 120, 120, 0.296);
-width: fit-content;
+width: auto;
 
-/* background-image: conic-gradient(rgb(140, 0, 255), yellow, green, blue, black); */
 
 display: grid;
 
@@ -52,6 +51,8 @@ grid-template-columns: 1fr;
 grid-template-rows: 1fr;
 justify-items: center;
 align-items: center;
+border-radius: 50%;
+
 
 }
 #primer {
@@ -63,7 +64,7 @@ align-items: center;
     align-items: center;
     justify-content: center ; */
     border-radius: 50%;
-    background-color: rgba(173, 120, 120, 0.296);
+    background-image: conic-gradient(var(--agua), var(--culto), var(--bosque), var(--agua));
     border: .3rem solid  rgb(238, 235, 233);
     /* position: absolute;
     top: 45%;
@@ -95,7 +96,8 @@ align-items: center;
     color: antiquewhite;
     position: relative;
     font-size: 1.5rem;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto Slab', serif;
     left: 45.5%;
     top: 24.5%;
     opacity: 75%;
@@ -653,7 +655,7 @@ filter: saturate(2);
 }
 
  #Guia {
-    z-index: 42;
+    z-index: 32;
     width: 70rem;
     height: .5rem; 
     /* border: .2rem solid  rgb(9, 6, 3); */
@@ -696,12 +698,19 @@ filter: saturate(2);
 } 
 
 
+h1{
 
+    margin: 0% auto;
+    width: 100%;
+    color: #231132;
+    font-size: 5rem;
+    font-family: 'Roboto Slab', serif;
+}
 
 h3{
     transform: rotate(-80deg);
     color: #9fcff7;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
@@ -710,38 +719,50 @@ h3{
 a{
     text-decoration: none;
 }
- /* #Culto::after{
-    content:"oooo";
-    font-size: smaller;
-    width: 1rem;
-    height: 1rem;
-    border: .2rem solid  rgb(172, 141, 116);
-    background-color: rgba(240, 153, 201, 0.482);
-    z-index: 0;
-    transform: translate(5rem, 3rem);
-}  */
 
-/* #Culto::before{
-    content:" ";
-    width: 1rem;
-    height: 5rem;
-    border: .2rem solid  rgb(172, 141, 116);
-    background-color: rgba(146, 10, 24, 0.482);
-    z-index: 0;
-    margin-top: -19px; 
-    transform: translate(-6rem, 1.5rem);    
+.escribe{
+    background: linear-gradient(90deg, rgba(30,6,43,0) 49%, rgba(30,6,43,1) 51%);
+    ;
+    text-align: right;
+    padding: 1.5rem;
+    color: #9fcff7;
+    font-size: 2rem;
+    margin: 0;
+    border-radius: 97% 3% 100% 0% / 0% 100% 0% 100% ;
+    text-shadow:  2rem 1.5rem #00000065;
+    font-family: 'Roboto Slab', serif;
+    background-color: #00000065;
+
+
+
+
+}
+#elige{
+    background-color: #00000065;
+    font-size: 1.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 3rem;
+
 }
 
-#Bosque2A::before{
-    content:" ";
-    width: 2rem;
-    height: 8rem;
-    background-color: rgb(40, 166, 29);
-    z-index: 0;
-    margin-left: 1rem; 
-    margin-top: -5rem;
-    transform: rotate(20deg);
-} */
+#editionGrid{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 0% 100% 3% 97% / 100% 0% 100% 0% ;
+    background: linear-gradient(90deg, rgba(30,6,43,0) 49%, rgba(30,6,43,1) 51%);
+
+
+}
+#editionGrid img{
+    width: 8rem;
+    border-radius: 50%;
+    border: .2rem solid  rgb(14, 6, 30);
+    margin-right: 3rem;
+    
+    
+    
+}
 
 /* BREAK POINT MOVIL */
 @media only screen and (max-width: 600px) {
