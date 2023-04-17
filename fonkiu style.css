@@ -42,8 +42,10 @@ body{
 
 margin: 0 auto;
 background-color: rgba(173, 120, 120, 0.296);
-width: auto;
+width: 100%;
+height: 100%;
 
+transform: scale(.5, .5);
 
 display: grid;
 
@@ -56,16 +58,16 @@ border-radius: 50%;
 
 }
 #primer {
-    z-index: 40;
-    width: 10rem;
-    height: 10rem;
+    z-index: 80;
+    width: 10.5rem;
+    height: 10.5rem;
     /* display: flex; */
     /* display: flex;
     align-items: center;
     justify-content: center ; */
     border-radius: 50%;
     background-image: conic-gradient(var(--agua), var(--culto), var(--bosque), var(--agua));
-    border: .3rem solid  rgb(238, 235, 233);
+    border: .3rem solid  rgba(173, 120, 120, 0.296);
     /* position: absolute;
     top: 45%;
     left: 45%; */
@@ -91,7 +93,7 @@ border-radius: 50%;
 
 }
 #primer p{
-    z-index: 40;
+    z-index: 45;
 
     color: antiquewhite;
     position: relative;
@@ -278,7 +280,7 @@ border-radius: 50%;
     
     background-color: var(--bosque);
 
-    z-index: 41;
+    z-index: 31;
     transform: rotate(114deg); 
     box-shadow: inset 0 0 3rem #2afb4a;
     /* box-shadow: inset 0 0 5rem #97f205;     */
@@ -288,7 +290,7 @@ border-radius: 50%;
 
 #BosqueShadow{
 
-    z-index: 30;
+    z-index: 32;
     grid-column: 1/2;
     grid-row: 1/2 ;
     margin-top: -11.2rem;   
@@ -308,7 +310,9 @@ border-radius: 50%;
     transition:all .5s;
 }
 
-
+.zIndex{
+    z-index:10 ;
+}
 
 #Bosque2A{
     z-index: 20;
@@ -496,7 +500,7 @@ border-radius: 50%;
     transform: rotate(270deg);
 }
 #CultoShadow{
-    z-index: 30;
+    z-index: 31;
     grid-column: 1/2;
     grid-row: 1/2 ;
     margin-bottom: -10.3rem;   

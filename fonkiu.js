@@ -14,6 +14,8 @@ const BosqueShadow3AB = document.getElementById("BosqueShadow3AB")
 const BosqueShadow3B = document.getElementById("BosqueShadow3B")
 const bosqueShadowArr = [BosqueShadow, BosqueShadow2A, BosqueShadow2B, BosqueShadow3A, BosqueShadow3AB, BosqueShadow3B]
 
+const primer = document.getElementById("primer")
+
 // const leidoBosqueShadowArr= [BosqueShadow, BosqueShadow2B, BosqueShadow3B]
 const leidoBosqueArr = [ ]
 
@@ -29,9 +31,13 @@ const leidoBosqueArr = [ ]
             
         }
     }
-    // for (let i = 0; i < bosqueShadowArr.length; i++) {
-    // }
-    
+
+
+    function zIndex(){
+        primer.classList.toggle ("zIndex")
+    }
+    primer.addEventListener("mouseout", zIndex);
+
 
     function shineBosque() {
         for (let i = 0; i < bosqueShadowArr.length; i++) {
