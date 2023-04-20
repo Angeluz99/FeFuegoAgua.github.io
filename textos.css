@@ -17,14 +17,24 @@
     --agua3:#6B9DCC;
     --agua3b:#51779b;
 
-    --culto:#66461C;
+    /* --culto:#66461C;
 
     --culto2:#A6712D;
     --culto2b:#a76b1c;
 
 
     --culto3:#ba7b28;
-    --culto3b:#996929;
+    --culto3b:#996929; */
+
+    --culto:#ac9006;
+
+    --culto2:#b39b28;
+    --culto2b:#cfb015;
+
+
+    --culto3:#bfa837;
+    --culto3b:#b19712;
+
 
   }
 
@@ -64,7 +74,7 @@
 }
 #gridContainerCulto{
 
-    background-color: #fcc75f;
+    background-color: #fcc85f80;
 
 
 }
