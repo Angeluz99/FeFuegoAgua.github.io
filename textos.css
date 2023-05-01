@@ -28,7 +28,7 @@
 
     --culto:#ac9006;
 
-    --culto2:#b39b28;
+    --culto2:#b59b1c;
     --culto2b:#cfb015;
 
 
@@ -189,34 +189,39 @@
     padding:1rem ;
     margin: 1rem ;
     border-radius: 25%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #ffffff;
+    filter: drop-shadow(-0.5rem 0.4rem 0.3rem rgba(0, 0, 0, 0.5));  
+    text-shadow: .2rem .2rem #000000a0;
+    
+
     
 
 }
 
 #optionCulto2A{
     background-color: var(--culto2);
-    box-shadow: inset 0 0 3rem #f9b070;
+    box-shadow: inset 0 0 3rem #fcf89b;
     
 
 }
 
 #optionCulto2B{
     background-color: var(--culto2b);
-    box-shadow: inset 0 0 3rem #f9b070;
+    box-shadow: inset 0 0 3rem #fcf89b;
+
 
 }
 
 #optionCulto3A{
     background-color: var(--culto2);
-    box-shadow: inset 0 0 3rem #f9b070;
+    box-shadow: inset 0 0 3rem #fcf89b;
 
 }
 
 #optionCulto3AB{
     background-color: var(--culto2b);
-    box-shadow: inset 0 0 3rem #f9b070;
+    box-shadow: inset 0 0 3rem #fcf89b;
 
 }
 

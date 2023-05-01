@@ -75,6 +75,9 @@ filter: grayscale(.8);
 
 }
 
+#primer a{
+    width: fit-content;
+}
 
 #play {
     z-index: 39;
@@ -474,7 +477,7 @@ filter: grayscale(.8);
 
 #Culto{
     width: 18rem;
-    z-index: 30;
+    z-index: 51;
 
     height: 28.5rem; 
     display: flex;
