@@ -16,6 +16,34 @@ const bosqueShadowArr = [BosqueShadow, BosqueShadow2A, BosqueShadow2B, BosqueSha
 
 const primer = document.getElementById("primer")
 
+const Culto =  document.getElementById("Culto")
+const Culto2A = document.getElementById("Culto2A")
+const Culto2B = document.getElementById("Culto2B")
+const Culto3A = document.getElementById("Culto3A")
+const Culto3AB = document.getElementById("Culto3AB")
+const Culto3B = document.getElementById("Culto3B")
+const cultoArr = [Culto, Culto2A, Culto2B, Culto3A, Culto3AB, Culto3B]
+
+const CultoShadow = document.getElementById("CultoShadow")
+const CultoShadow2A = document.getElementById("CultoShadow2A")
+const CultoShadow2B = document.getElementById("CultoShadow2B")
+const CultoShadow3A = document.getElementById("CultoShadow3A")
+const CultoShadow3AB = document.getElementById("CultoShadow3AB")
+const CultoShadow3B = document.getElementById("CultoShadow3B")
+const cultoShadowArr = [CultoShadow, CultoShadow2A, CultoShadow2B, CultoShadow3A, CultoShadow3AB, CultoShadow3B]
+
+
+var audio = document.getElementById("audio");
+var body = document.querySelector("body");
+
+body.addEventListener("mouseover", play)
+
+function play(){
+    audio.play();
+}
+
+
+
 // const leidoBosqueShadowArr= [BosqueShadow, BosqueShadow2B, BosqueShadow3B]
 const leidoBosqueArr = [ ]
 
@@ -33,10 +61,44 @@ const leidoBosqueArr = [ ]
     }
 
 
+
     function zIndex(){
         primer.classList.toggle ("zIndex")
     }
     primer.addEventListener("mouseout", zIndex);
+
+
+ function shineCulto() {
+        for (let i = 0; i < cultoShadowArr.length; i++) {
+            cultoShadowArr[i].classList.add("shadow")
+        }
+
+        for (let i = 0; i < cultoArr.length; i++) {
+            cultoArr[i].classList.add("scale")
+        }   
+    }
+
+    for (let i = 0; i < cultoArr.length; i++) {
+        cultoArr[i].addEventListener("mouseover", shineCulto);
+    }
+    Culto.addEventListener("mouseover", shineCulto);
+
+    function darkCulto(){
+        for (let i = 0; i < cultoShadowArr.length; i++) {
+            cultoShadowArr[i].classList.remove("shadow")
+        }
+
+        for (let i = 0; i < cultoArr.length; i++) {
+            cultoArr[i].classList.remove("scale")
+        }
+    }
+
+    for (let i = 0; i < cultoArr.length; i++) {
+        cultoArr[i].addEventListener("mouseout", darkCulto);
+    }
+    Culto.addEventListener("mouseout", darkCulto);
+
+
 
 
     function shineBosque() {
@@ -68,6 +130,10 @@ const leidoBosqueArr = [ ]
         bosqueArr[i].addEventListener("mouseout", darkBosque);
     }
     Bosque.addEventListener("mouseout", darkBosque);
+
+
+
+
 
 
    let angle = 0;
