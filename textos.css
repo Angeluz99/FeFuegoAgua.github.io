@@ -82,7 +82,7 @@
 #dataInicio{
     z-index: 10;
     grid-area: dataUp;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: justify;
     margin: 3rem;
     padding: 3rem;

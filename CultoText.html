@@ -59,8 +59,8 @@
 
 
 
-  <script>
-  fetch('Culto.txt')
+  <script src="CultoText.js">
+    fetch('Culto.txt')
   .then(response => response.blob())
   .then(blob => {
     const reader = new FileReader();
@@ -95,30 +95,11 @@
     });
     reader.readAsText(blob);
 
-    
   });
-
 
 
   
 
-
-  // function submitForm2() {         
-  // const textarea2 = document.getElementById("textarea2").value;
-  // localStorage.setItem("textarea2", textarea2);
-  // }
-      
-  // const storedText2 = localStorage.getItem("textarea2");
-  // if (storedText2) {
-  //   const paragraphs = storedText2.split("\n");
-        
-  //   let html = "";
-  //   for (const paragraph of paragraphs) {
-  //     html += `<p>${paragraph}</p>`;
-  //   }
-        
-  //   document.getElementById("dataDown").innerHTML = html;
-  // }
   </script>
 </body>
 </html>

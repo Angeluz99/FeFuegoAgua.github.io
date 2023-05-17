@@ -36,11 +36,11 @@ const cultoShadowArr = [CultoShadow, CultoShadow2A, CultoShadow2B, CultoShadow3A
 var audio = document.getElementById("audio");
 var body = document.querySelector("body");
 
-body.addEventListener("mouseover", play)
+// body.addEventListener("mouseover", play)
 
-function play(){
-    audio.play();
-}
+// function play(){
+//     audio.play();
+// }
 
 
 

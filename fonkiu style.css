@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;1,100&family=Poppins:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;1,100&family=Poppins:wght@400;500&family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,700;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
     --bosque: #309221 ;
     --bosque2:#45B035;
@@ -566,10 +567,15 @@ animation-timing-function: ease-in-out;
 } 
 
 #Culto img{
-    
     width: 10rem;
     mix-blend-mode: lighten;
     transform: rotate(270deg);
+}
+
+#youngwoman{
+    display: none;
+
+
 }
 #CultoShadow{
     z-index: 41;
@@ -777,10 +783,11 @@ h1 {
     height: fit-content;
     z-index: 10;
     margin: .5rem auto;
+    margin-left: 2rem;
     padding: 1rem;
     color: rgb(218, 186, 186) ;
     font-size: 4rem;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'PT Serif', serif ;
    
     text-shadow:  .15rem .15rem rgba(173, 120, 120);
     /* box-shadow: inset 0 .5rem 1rem #bf82bf;     */
@@ -819,8 +826,9 @@ h1 p{
         
 
     
-    80%  {clip-path: circle(90%); color: #590e7b; text-shadow:  .15rem .15rem rgb(171, 151, 151);
-    scale: 1.1;
+    70%  {clip-path: circle(90%); color: #590e7b; text-shadow:  .15rem .15rem rgb(171, 151, 151);
+    scale: 1.1; font-family: 'Roboto Slab', serif;
+    
     }
 
     100%  {clip-path: circle(100%); box-shadow: inset 0 .5rem 1rem #bf82bf;}
