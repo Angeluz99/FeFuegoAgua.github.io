@@ -103,7 +103,6 @@ animation-timing-function: ease-in-out;
     align-items: center;
     justify-content: center ; */
     border-radius: 50%;
-    background-color: rgba(173, 120, 120);
     /* background-image: conic-gradient(var(--agua), var(--culto), var(--bosque), var(--agua)); */
     border: .5rem solid  rgb(218, 186, 186);
     /* position: absolute;
@@ -112,48 +111,54 @@ animation-timing-function: ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: blur(1px);
+
 
     grid-column: 1/2;
     grid-row: 1/2 ;
+    background-color: rgba(173, 120, 120);
+
+
 
 }
+#primer :hover {
+    filter: blur(0px);
 
+}
 
 #play {
     z-index: 39;
 
-    /* width: 153.6px; */
-    width: 15rem;
-    /* width: 8rem; */
-    transform: rotate(-0deg);
-    /* filter: sepia(.1); */
-    /* filter: invert(40%); */
-    filter: hue-rotate(30deg);   
-    position: relative;
-    transform: translate(-2.8rem, -4rem);
-    opacity: 90%; 
-    grid-column: 1/2;
-    grid-row: 1/2 ;
-    top: 3rem;
-    left: -2.5rem;
-    transition: all .5s ease-in;
-    filter: drop-shadow(-0.8rem 0.4rem 0.3rem rgba(50, 50, 0, 0));  
+    clip-path: polygon(50% 16%, 0% 100%, 100% 100%);
+    background: radial-gradient(circle, rgba(229,126,138,1) 0%, rgba(252,4,4,0.57484243697479) 100%);
+    width: 8rem;
+    height: 8rem;
+    transform: rotate(-31.5deg);
+    margin-top: -2.8rem;
+    margin-left: -2.5rem;
 
+    transition: all 1s ease-out;
+    
 
 
 }
 
 #play:hover{
-    filter: saturate(1.1);
-    filter: drop-shadow(-0.5rem 0.4rem 0.3rem rgba(50, 50, 0, 0.815));  
-
+    background: linear-gradient(93deg, rgb(186, 22, 41) 0%, rgba(244,177,243,1) 100%);
+    border-radius: 15%;
 }
 
 #primer a{
 
     width: 5rem;
+    transition: all 1s ease-out;
 
     }
+#primer a:hover{
+    transform: scale(1.1);
+}
+
+
 #primer p{
     z-index: 45;
     padding: 0;
@@ -167,20 +172,20 @@ animation-timing-function: ease-in-out;
     font-size: 1.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-family: 'Roboto Slab', serif;
-    opacity: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    grid-column: 1/2;
-    grid-row: 1/2 ;
 
-    left: .5rem;
-    top: 4rem;
+    left: 2rem;
+    top: 5rem;
+    transform: rotate(28deg);
+    transition: all 1s ;
     
 
 }
 
+#primer p:hover{
+transform: scale(1.1);
+margin-left: -.4rem;
 
+}
 #Agua {
     z-index: 31;
     width: 18rem;
@@ -814,6 +819,7 @@ h1 {
 h1 p{
     padding: 0;
     margin: 0;
+    transform: translate(2rem);
 
 
 
@@ -827,7 +833,7 @@ h1 p{
 
     
     70%  {clip-path: circle(90%); color: #590e7b; text-shadow:  .15rem .15rem rgb(171, 151, 151);
-    scale: 1.1; font-family: 'Roboto Slab', serif;
+    scale: 1.1; 
     
     }
 
